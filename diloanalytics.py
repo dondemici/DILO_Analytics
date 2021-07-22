@@ -70,12 +70,6 @@ def generateanalytics():
     df['End Time'] = df["Date2"] + ' ' + df["End1"].astype(str) + ':' + df["End2"].astype(str) 
     df['End Time'] = pd.to_datetime(df['End Time'])
     df['Turnaround Time'] = df['Turnaround Time'].round(2)
-
-    #Surface the Needed Columns in the Raw DILO Sheet
-    #df = (df.loc[:10000,["Month","Week","Reference",
-    #    "Date","Process Owner","Activities","Comments","OT Reason",
-    #    "Volume Completed","Start","End","Process Duration","Turnaround Time",
-    #    "Start Time","End Time","Total Hours","Reference","Team"]]) 
     
     #To be used as filename
     username = df.iloc[0] ["Process Owner"]
